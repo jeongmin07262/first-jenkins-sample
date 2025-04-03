@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class HelloController {
+
     @GetMapping("/hello")
     public String sayHello() {
         System.out.println("hello!!");
@@ -19,6 +20,12 @@ public class HelloController {
     public String sayBye() {
         System.out.println("Bye!!");
         return "Bye World!";
+    }
+
+    @GetMapping("/play")
+    public String sayPlay() {
+        System.out.println("Play!!");
+        return "Play World!";
     }
 
 }
